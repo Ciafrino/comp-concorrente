@@ -54,7 +54,7 @@ int main() {
 
         arg->id_thread = id;
         arg->cnt_thread = NTHREADS; 
-        arg->parity = id & 1; // paridade da thread
+        arg->parity = id; // paridade da thread
 
         if (pthread_create(&tid[id], NULL, square, (void*)arg)) {
             printf("--ERRO: pthread_create()\n");
