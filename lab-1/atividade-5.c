@@ -22,14 +22,14 @@ const int N = 10000; // quantidade de elementos no array
 
 int values[100010];
 
-// retorna o indice correspondente do array dependendo da paridade
-// Se for a thread par, quero calcular para os indices pares (2 * indice)
-// E análogo caso a thread seja ímpar (2 * indice + 1)
+// retorna o indice i-esimo elemento do array de paridade específica
+// se for a thread par, quero calcular para os indices pares (ou seja, 2 * i)
+// e caso a thread seja ímpar vamos fazer (2 * i + 1)
 int get_index(int i, int parity) {
     return 2 * i + parity;
 }
 
-// eleva ao quadrado os elementos de índices pares ou ímpares do array values 
+// eleva ao quadrado os elementos de índices pares ou ímpares do array values
 void *square(void *arg) {
     data_t* cur_thread = (data_t *)arg;
     
