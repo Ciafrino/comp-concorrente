@@ -1,0 +1,89 @@
+\documentclass[11pt,oneside,openright,numbers=noenddot]{scrbook}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{color}
+\usepackage{transparent}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{xspace}
+
+\author{Christopher Ciafrino de Souza}
+\title{Avaliação de aplicações concorrentes - Laboratório 2}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Testes}
+Executei cinco vezes cada um dos testes abaixo 
+numa matriz $N$ por $N$ preenchida com 1's. 
+
+\begin{enumerate}
+	\item Com $N = 500$
+	\begin{enumerate}
+		\item Uma thread:\\
+			Tempo inicializaçao: 0.001649\\
+			Tempo execução: 0.633234\\
+			Tempo finalização: 0.000166
+		\item Duas threads:\\
+			Tempo inicializaçao: 0.001665\\
+			Tempo execução: 0.372172\\
+			Tempo finalização: 0.000204		
+		\item Quatro threads:\\
+			Tempo inicializaçao: 0.001515\\
+			Tempo execução: 0.359666\\
+			Tempo finalização: 0.000191
+	\end{enumerate}
+	\item Com $N = 1000$
+	\begin{enumerate}
+		\item Uma thread:\\
+			Tempo inicializaçao: 0.006679\\
+			Tempo execução: 5.824089\\
+			Tempo finalização: 0.000674	
+		\item Duas threads:\\
+			Tempo inicializaçao: 0.006140\\
+			Tempo execução: 3.499523\\
+			Tempo finalização: 0.000815
+		\item Quatro threads:\\
+			Tempo inicializaçao: 0.012762\\
+			Tempo execução: 3.998720\\
+			Tempo finalização: 0.000698
+	\end{enumerate}
+
+\item Com $N = 2000$
+	\begin{enumerate}
+		\item Uma thread:\\
+			Tempo inicializaçao: 0.024879\\
+			Tempo execução: 72.888006\\
+			Tempo finalização: 0.003429
+		\item Duas threads:\\
+			Tempo inicializaçao: 0.023512\\
+			Tempo execução: 59.501104\\
+			Tempo finalização: 0.004463
+		\item Quatro threads:\\
+			Tempo inicializaçao: 0.024411\\
+			Tempo execução: 53.986719\\
+			Tempo finalização: 0.004337
+	\end{enumerate}
+	
+\end{enumerate}
+
+\section{Conclusão}
+
+O valores batem sim com o que eu esperava. Conforme fui aumentando a dimensão
+da matriz consegui ver como o aumento na quantidade de threads
+impactava mais no desempenho do programa (como pode ser observado nos resultados acima).
+
+\
+
+
+Executei esses testes na minha máquina pessoal com processador core i7-4510U 
+que possui 4 CPU's e 2 threads por core.
+
+\end{document}
