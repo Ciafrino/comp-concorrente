@@ -62,7 +62,8 @@ int main(int argc, char* argv[]) {
     }
 
     dim = atoi(argv[1]);
-    nthreads = (nthreads > dim ? dim : atoi(argv[2]));
+    nthreads = atoi(argv[2]);
+    nthreads = (nthreads > dim ? dim : nthreads);
      
     // inicialização
    
