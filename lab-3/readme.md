@@ -1,4 +1,4 @@
-1. Caso N = 10^5 e duas threads
+1. Caso $N = 10^5$ e duas threads
 	* Concorrente =  0.000399
 	* Sequencial = 0.000313
 
