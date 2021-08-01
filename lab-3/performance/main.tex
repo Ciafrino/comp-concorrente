@@ -1,0 +1,58 @@
+\documentclass[11pt,oneside,openright,numbers=noenddot]{scrbook}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{color}
+\usepackage{transparent}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{xspace}
+
+\author{Christopher Ciafrino de Souza}
+\title{Avaliação de aplicações concorrentes - Laboratório 2}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Testes}
+Executei cinco vezes cada um dos testes abaixo 
+
+\begin{enumerate}
+	\item Com $N = 100000$
+	\begin{enumerate}
+		\item Duas threads:\\
+			$T_{concorrente}$: 0.000399\\
+			$T_{sequencial}$: 0.000313\\
+		\item Quatro threads:\\
+			$T_{concorrente}$: 0.000363\\
+			$T_{sequencial}$: 0.000332\\
+	\end{enumerate}
+	\item Com $N = 10000000$
+	\begin{enumerate}
+		\item Duas threads:\\
+			$T_{concorrente}$: 0.016793\\
+			$T_{sequencial}$: 0.031317\\
+		\item Quatro threads:\\
+			$T_{concorrente}$: 0.015509\\
+			$T_{sequencial}$: 0.032015\\
+	\end{enumerate}
+
+\item Com $N = 1000000000$
+	\begin{enumerate}
+	\item Duas threads:\\
+			$T_{concorrente}$: 0.016793\\
+			$T_{sequencial}$: 7.684930\\
+		\item Quatro threads:\\
+			$T_{concorrente}$: 4.734574\\
+			$T_{sequencial}$: 8.195359\\
+	\end{enumerate}
+	
+\end{enumerate}
+
+\end{document}
