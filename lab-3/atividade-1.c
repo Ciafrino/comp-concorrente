@@ -1,4 +1,4 @@
-// Me baseei no código construido com a turma nas aulas assincronas da semana 2
+// Me baseei no código construido com a turma nas aulas assincronas da semana 3
 #include<stdio.h>
 #include<stdlib.h>
 #include<pthread.h>

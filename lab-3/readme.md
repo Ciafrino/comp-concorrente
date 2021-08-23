@@ -1,4 +1,4 @@
-Para cada um dos seis casos, exatamente cinco vezes e peguei os menores tempos
+Para cada um dos seis casos, rodei exatamente cinco vezes e peguei a média tempos
 ---
 
 1. Caso N = 10^5 e duas threads
